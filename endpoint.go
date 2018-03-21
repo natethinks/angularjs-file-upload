@@ -27,7 +27,9 @@ func ReceiveFile(w http.ResponseWriter, r *http.Request) {
 	// I normally have a struct defined and unmarshal into a struct, but this will
 	// work as an example
 	contents := Buf.String()
+
 	fmt.Println(contents)
+
 	// I reset the buffer in case I want to use it again
 	// reduces memory allocations in more intense projects
 	Buf.Reset()
